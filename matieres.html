@@ -104,7 +104,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
+                        <li class=" has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i> Tableau de Bord</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
@@ -113,7 +113,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="matieres.html">
                                 <i class="fa  fa-book"></i>Gestion des Matières</a>
                         </li>
@@ -197,7 +197,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- DATA TABLE -->
-                                <h3 class="title-5 m-b-35">data table</h3>
+                                <h3 class="title-5 m-b-35">Les matieres</h3>
                                 <div class="table-data__tool">
                                     <!-- <div class="table-data__tool-left">
                                         <div class="rs-select2--light rs-select2--md">
@@ -221,7 +221,7 @@
                                     </div> -->
                                     <div class="table-data__tool-right">
                                         <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                            <i class="zmdi zmdi-plus"></i>add item</button>
+                                            <i class="zmdi zmdi-plus"></i>Ajouter un matiere</button>
                                         <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                                             <!-- <select class="js-select2" name="type">
                                                 <option selected="selected">Export</option>
@@ -236,34 +236,27 @@
                                     <table class="table table-data2">
                                         <thead>
                                             <tr>
-                                                <th>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </th>
-                                                <th>name</th>
-                                                <th>email</th>
-                                                <th>description</th>
-                                                <th>date</th>
-                                                <th>status</th>
-                                                <th>price</th>
-                                                <th></th>
+                                                <th>code</th>
+                                                <th>nom</th>
+                                                <th>credit</th>
+                                                <th>semestre</th>
+                                                <th>filiere</th>
+                                                
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr class="spacer"></tr>
                                             <tr class="tr-shadow">
-                                                <td>Lori Lynch</td>
                                                 <td>
-                                                    <span class="block-email">john@example.com</span>
+                                                    <span class="block-email">1234</span>
                                                 </td>
-                                                <td class="desc">iPhone X 64Gb Grey</td>
-                                                <td>2018-09-29 05:57</td>
+                                                <td class="desc">Algebre</td>
+                                                <td class="desc">2</td>
+                                                <td>2</td>
                                                 <td>
-                                                    <span class="status--process">Processed</span>
+                                                    <span class="status--process">TC</span>
                                                 </td>
-                                                <td>$999.00</td>
                                                 <td>
                                                     <div class="table-data-feature">
                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
@@ -279,13 +272,6 @@
                                     </table>
                                 </div>
                                 <!-- END DATA TABLE -->
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                                </div>
                             </div>
                         </div>
                     </div>
