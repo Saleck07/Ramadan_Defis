@@ -43,7 +43,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            <img src="images/icon/logo-supnum2.png" alt="Supnum" style="height: 50px; width: 50px;" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -147,11 +147,7 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <!-- <input class="au-input au-input--xl" type="text" name="search"
-                                        placeholder="Search for datas &amp; reports..." />
-                                    <button class="au-btn--submit" type="submit">
-                                        <i class="zmdi zmdi-search"></i>
-                                    </button> -->
+
                             </form>
                             <div class="header-button">
                                 <div class="account-wrap">
@@ -199,29 +195,15 @@
                                 <!-- DATA TABLE -->
                                 <h3 class="title-5 m-b-35">Les matieres</h3>
                                 <div class="table-data__tool">
-                                    <!-- <div class="table-data__tool-left">
-                                        <div class="rs-select2--light rs-select2--md">
-                                            <select class="js-select2" name="property">
-                                                <option selected="selected">All Properties</option>
-                                                <option value="">Option 1</option>
-                                                <option value="">Option 2</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <div class="rs-select2--light rs-select2--sm">
-                                            <select class="js-select2" name="time">
-                                                <option selected="selected">Today</option>
-                                                <option value="">3 Days</option>
-                                                <option value="">1 Week</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <button class="au-btn-filter">
-                                            <i class="zmdi zmdi-filter-list"></i>filters</button>
-                                    </div> -->
+
                                     <div class="table-data__tool-right">
-                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                            <i class="zmdi zmdi-plus"></i>Ajouter un matiere</button>
+                                        <!-- <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                            <i class="zmdi zmdi-plus"></i>Ajouter un matiere</button> -->
+                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small"
+                                            data-toggle="modal" data-target="#addMatiereModal">
+                                            <i class="zmdi zmdi-plus"></i>Ajouter un matiere
+                                        </button>
+
                                         <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                                             <!-- <select class="js-select2" name="type">
                                                 <option selected="selected">Export</option>
@@ -241,7 +223,7 @@
                                                 <th>credit</th>
                                                 <th>semestre</th>
                                                 <th>filiere</th>
-                                                
+
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -259,10 +241,12 @@
                                                 </td>
                                                 <td>
                                                     <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                        <button class="item" data-placement="top"
+                                                            title="Edit" data-toggle="modal" data-target="#addMatiereModal">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                            title="Delete">
                                                             <i class="zmdi zmdi-delete"></i>
                                                         </button>
                                                     </div>
@@ -280,6 +264,88 @@
         </div>
 
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="addMatiereModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ajouter une Matière</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="matiereForm">
+                        <div class="form-group">
+                            <label for="code">Code</label>
+                            <input type="text" class="form-control" id="code" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="credit">Crédit</label>
+                            <input type="number" class="form-control" id="credit" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="semestre">Semestre</label>
+                            <input type="number" class="form-control" id="semestre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="filiere">Filière</label>
+                            <input type="text" class="form-control" id="filiere" required>
+                        </div>
+                        <button type="submit" class="au-btn au-btn-icon au-btn--green au-btn--small">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editMatiereModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modifier la Matière</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editMatiereForm">
+                        <input type="hidden" id="editRowIndex">
+                        <div class="form-group">
+                            <label for="editCode">Code</label>
+                            <input type="text" class="form-control" id="editCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editNom">Nom</label>
+                            <input type="text" class="form-control" id="editNom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editCredit">Crédit</label>
+                            <input type="number" class="form-control" id="editCredit" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editSemestre">Semestre</label>
+                            <input type="number" class="form-control" id="editSemestre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editFiliere">Filière</label>
+                            <input type="text" class="form-control" id="editFiliere" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END EDIT MODAL -->
+
 
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
@@ -307,5 +373,4 @@
 
 </body>
 
-</html>
-<!-- end document-->
+</html><!-- end document-->
